@@ -1,3 +1,5 @@
-export const App = ({ text }: { text: string }) => {
-  return <h2>{text}</h2>;
+import { Outlet } from "react-router-dom";
+
+export const App = () => {
+  return <Outlet />;
 };
