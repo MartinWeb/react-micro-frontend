@@ -1,3 +1,3 @@
-export const App = () => {
-  return <h2>This is a child front end !</h2>;
+export const App = ({ text }: { text: string }) => {
+  return <h2>{text}</h2>;
 };
