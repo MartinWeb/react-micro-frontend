@@ -1,16 +1,12 @@
-import SimpleButton from "@axa-fr/react-toolkit-button";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <h1>Bienvenue sur notre application basé sur des micros front-end</h1>
 
-      <SimpleButton onClick={() => navigate(`/consultation`)}>
-        Aller vers la consultation
-      </SimpleButton>
+      <Link to={`consultation`}>Aller vers la consultation</Link>
+      <Link to={`remote`}>Aller vers le second frontend</Link>
     </>
   );
 };

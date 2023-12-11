@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { appRouter } from "./routing/router.config.tsx";
-import "bootstrap/scss/bootstrap-grid.scss";
-import "bootstrap/scss/bootstrap-reboot.scss";
+import { App } from "./App";
 
-const router = createBrowserRouter(appRouter);
+const router = createBrowserRouter([{ path: "*", element: <App /> }], {
+  basename: "/remote",
+});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>

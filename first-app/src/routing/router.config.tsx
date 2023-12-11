@@ -1,18 +1,25 @@
-import { App } from "../App";
-import { Home } from "../pages/Home/Home";
+import { Link } from "react-router-dom";
 import { Process } from "../pages/Process/Process";
 
 export const appRouter = [
   {
     path: "/",
-    Component: App,
     children: [
       {
-        path: "/",
-        element: <Home />,
+        path: "",
+        element: (
+          <>
+            <h1>
+              Ceci est une page d'accueil d'une seconde application (le
+              composant est situé à l'intérieur du front end first-app).
+            </h1>
+
+            <Link to={`process`}>Aller vers la page de process</Link>
+          </>
+        ),
       },
       {
-        path: "/process",
+        path: "process",
         element: <Process />,
       },
     ],

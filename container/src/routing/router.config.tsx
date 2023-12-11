@@ -1,6 +1,7 @@
 import { App } from "../App";
 import { Consultation } from "../pages/Consultation/Consultation";
 import { Home } from "../pages/Home/Home";
+import { App as ChildApp } from "firstApp/App";
 
 export const appRouter = [
   {
@@ -14,6 +15,10 @@ export const appRouter = [
       {
         path: "/consultation",
         element: <Consultation />,
+      },
+      {
+        path: "/remote/*",
+        element: <ChildApp />,
       },
     ],
   },
