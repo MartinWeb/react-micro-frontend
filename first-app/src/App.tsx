@@ -1,5 +1,8 @@
 import { Link, Route, Routes } from "react-router-dom";
 import { Process } from "./pages/Process/Process";
+import { Alert } from "@axa-fr/react-toolkit-all";
+
+import "@axa-fr/react-toolkit-alert/dist/af-alert.css";
 
 export const App = () => {
   return (
@@ -8,10 +11,11 @@ export const App = () => {
         path="/"
         element={
           <>
-            <h1>
-              Ceci est une page d'accueil d'une seconde application (le
-              composant est situé à l'intérieur du front end first-app).
-            </h1>
+            <Alert
+              classModifier="success"
+              icon="glyphicon glyphicon-ok"
+              title="Vous êtes sur le second frontend"
+            />
 
             <Link to={`process`}>Aller vers la page de process</Link>
           </>

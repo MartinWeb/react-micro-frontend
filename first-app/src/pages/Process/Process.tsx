@@ -1,8 +1,7 @@
+import { Title } from "@axa-fr/react-toolkit-all";
+
+import "@axa-fr/react-toolkit-title/dist/af-title.css";
+
 export const Process = () => {
-  return (
-    <h1>
-      Ceci est une page de process (le composant est situé à l'intérieur du
-      front end first-app).
-    </h1>
-  );
+  return <Title>Process</Title>;
 };

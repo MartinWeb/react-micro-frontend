@@ -1,0 +1,11 @@
+.page {
+  width: 1140px;
+  margin: auto;
+  flex-grow: 1;
+}
+
+.app {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
