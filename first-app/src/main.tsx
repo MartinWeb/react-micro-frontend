@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { App } from "./App";
+import App from "./App";
 
 import "bootstrap/scss/bootstrap-grid.scss";
 import "bootstrap/scss/bootstrap-reboot.scss";

@@ -1,7 +1,8 @@
+import React, { Suspense } from "react";
 import { App } from "../App";
-import { Consultation } from "../pages/Consultation/Consultation";
 import { Home } from "../pages/Home/Home";
-import { App as ChildApp } from "firstApp/App";
+import Consultation from "../pages/Consultation/Consultation";
+const ChildApp = React.lazy(() => import("firstApp/App"));
 
 export const appRouter = [
   {
@@ -18,7 +19,12 @@ export const appRouter = [
       },
       {
         path: "/remote/*",
-        element: <ChildApp />,
+        element: (
+          <Suspense fallback={<p>Chargement en cours...</p>}>
+            <ChildApp />
+          </Suspense>
+        ),
+        errorElement: <p>Erreur au chargement</p>,
       },
     ],
   },

@@ -4,7 +4,7 @@ import { Alert } from "@axa-fr/react-toolkit-all";
 
 import "@axa-fr/react-toolkit-alert/dist/af-alert.css";
 
-export const App = () => {
+const App = () => {
   return (
     <Routes>
       <Route
@@ -25,3 +25,5 @@ export const App = () => {
     </Routes>
   );
 };
+
+export default App;
