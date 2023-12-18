@@ -21,8 +21,11 @@ export const Home = () => {
         <Link className="af-btn" to={`consultation`}>
           Aller vers la consultation
         </Link>
-        <Link className="af-btn af-btn--danger" to={`remote`}>
+        <Link className="af-btn af-btn--danger" to={`first`}>
           Aller vers le second frontend
+        </Link>
+        <Link className="af-btn af-btn--reverse" to={`remote`}>
+          Aller vers le troisième frontend
         </Link>
       </div>
     </>
