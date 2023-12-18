@@ -1,27 +1,24 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Process } from "./pages/Process/Process";
-import { Alert } from "@axa-fr/react-toolkit-all";
+import React, { Suspense } from "react";
+import { Home } from "./pages/Home/Home";
 
-import "@axa-fr/react-toolkit-alert/dist/af-alert.css";
+const Remote = React.lazy(() => import("remoteSecond/App"));
 
 const App = () => {
   return (
     <Routes>
-      <Route
-        path="/"
-        element={
-          <>
-            <Alert
-              classModifier="success"
-              icon="glyphicon glyphicon-ok"
-              title="Vous êtes sur le second frontend"
-            />
-
-            <Link to={`process`}>Aller vers la page de process</Link>
-          </>
-        }
-      />
+      <Route path="/" element={<Home />} />
       <Route path="process" element={<Process />} />
+      <Route
+        path="remote"
+        element={
+          <Suspense fallback={<p>Chargement en cours...</p>}>
+            <Remote />
+          </Suspense>
+        }
+        errorElement={<p>Erreur au chargement.</p>}
+      />
     </Routes>
   );
 };
