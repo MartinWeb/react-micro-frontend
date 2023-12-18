@@ -8,7 +8,7 @@ export default defineConfig({
   federation({
     name: 'firstApp',
     remotes: {
-      remoteSecond: "http://localhost:5004/assets/remoteEntry.js"
+      remoteSecond: ""
     },
     filename: 'remoteEntry.js',
     exposes: {

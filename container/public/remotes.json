@@ -1,0 +1,4 @@
+{
+  "firstAppUrl": "http://localhost:5002/assets/remoteEntry.js",
+  "remoteUrl": "http://localhost:5003/assets/remoteEntry.js"
+}
